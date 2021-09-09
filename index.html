@@ -25,7 +25,7 @@
             <span>Entradas</span>
             <img src="./assets/income.svg" alt="imagem de entradas" />
           </h3>
-          <p>R$ 5.000,00</p>
+          <p id="incomeDisplay">R$ 0,00</p>
         </div>
 
         <div class="card">
@@ -33,7 +33,7 @@
             <span>Saídas</span>
             <img src="./assets/expense.svg" alt="Imagem de saídas" />
           </h3>
-          <p>R$ 2.000,00</p>
+          <p id="expenseDisplay">R$ 0,00</p>
         </div>
 
         <div class="card total">
@@ -41,14 +41,14 @@
             <span>Total</span>
             <img src="./assets/total.svg" alt="imagem de total" />
           </h3>
-          <p>R$ 3.000,00</p>
+          <p id="totalDisplay">R$ 0,00</p>
         </div>
       </section>
 
       <section id="transaction">
         <h2 class="sr-only">Transações</h2>
 
-        <a href="#" onClick="Modal.toggleActive()" class="button new"
+        <a href="#" onclick="Modal.toggleActive()" class="button new"
           >+ Nova Transação</a
         >
 
@@ -70,7 +70,7 @@
       <div class="modal">
         <div id="form">
           <h2>Nova Transação</h2>
-          <form action="">
+          <form action="" onsubmit="Form.submit(event)">
             <div class="input-group">
               <label class="sr-only" for="description">Descrição</label>
               <input
@@ -81,7 +81,7 @@
               />
             </div>
             <div class="input-group">
-              <label class="sr-only" for="amount">Descrição</label>
+              <label class="sr-only" for="amount">Quantia</label>
               <input
                 type="number"
                 step="0.01"
@@ -108,7 +108,7 @@
               <a href="#" onClick="Modal.toggleActive()" class="button cancel"
                 >Cancelar</a
               >
-              <button onClick="Modal.toggleActive()">Salvar</button>
+              <button>Salvar</button>
             </div>
           </form>
         </div>

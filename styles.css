@@ -261,8 +261,8 @@ td img.remove-button {
   margin-top: 0.8rem;
 }
 
-.input-group small {
-  margin-left: 1px;
+.input-group .help {
+  margin-left: 2px;
   opacity: 0.5;
 }
 
