@@ -100,9 +100,9 @@ const Utils = {
     return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
   },
   formatAmount(amount) {
-    amount = Number(amount.replace(/\,\./g, "")) * 100;
+    amount = amount * 100;
 
-    return amount;
+    return Math.round(amount);
   },
   formatCurrency(value) {
     const signal = Number(value) < 0 ? "-" : "";
